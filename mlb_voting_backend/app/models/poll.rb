@@ -1,3 +1,3 @@
 class Poll < ApplicationRecord
-  belongs_to :user
+  has_many :player_names
 end
