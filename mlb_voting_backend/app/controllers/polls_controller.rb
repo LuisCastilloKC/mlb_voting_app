@@ -1,5 +1,10 @@
 class PollsController < ApplicationController
 
+    def index
+        polls = Poll.all
+        render json: polls
+    end
+
     def create
        poll = Poll.create(poll_params)
        render json: poll 

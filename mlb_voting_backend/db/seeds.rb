@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+poll = Poll.create(question: "Who is the MVP?")
+PlayerName.create(name: "Alex Rodriguez", poll_id: poll.id)
+PlayerName.create(name: "Vladimir Guerrero Jr", poll_id: poll.id)
+PlayerName.create(name: "Manny Ramirez", poll_id: poll.id)
+PlayerName.create(name: "David Ortiz", poll_id: poll.id)
