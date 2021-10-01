@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPolls } from '../pollsActions'
+import { fetchPolls } from '../actions/pollsActions'
 
 class PollsContainer extends Component {
     render(){

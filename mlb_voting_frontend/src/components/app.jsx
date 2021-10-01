@@ -1,9 +1,10 @@
 import React from 'react';
+import PollsContainer from './PollsContainer'
 
 const App = () => {
     return (
         <div>
-            Hello World!
+            <PollsContainer />
         </div>
     );
 };
