@@ -1,10 +1,18 @@
 import React from 'react';
 import PollsContainer from './PollsContainer'
+import { Navbar } from './Navbar';
+import { About } from './About';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 
 const App = () => {
     return (
         <div>
-            <PollsContainer />
+            <Router>
+                <Navbar />
+                <Switch>
+                <Route path="/about" exact component={About} />
+                </Switch>
+            </Router>
         </div>
     );
 };
