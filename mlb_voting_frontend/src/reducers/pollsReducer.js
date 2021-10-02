@@ -1,8 +1,10 @@
 
-export const pollsReducer = (state = [], action) => {
+export const pollsReducer = (state = {polls: []}, action) => {
     switch(action.type){
         case 'FETCH_POLLS':
-            return action.payload
+            return {
+                polls: action.payload
+            }
             default:
                 return state
     }

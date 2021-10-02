@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPolls } from '../actions/pollsActions'
+import Poll from './Poll'
 
 class PollsContainer extends Component {
-
     componentDidMount(){
         this.props.fetchPolls()
     }
@@ -12,9 +12,24 @@ class PollsContainer extends Component {
         return (
             <div>
                 Polls Container
+                {this.props.polls.map(poll => <Poll pollKey={poll} />)}
             </div>
         );
     }
 }
 
-export default connect(null, { fetchPolls })(PollsContainer);
+const mapStateToProps = state => {
+    return {
+        polls: state.polls.polls
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchPolls: () => dispatch(fetchPolls())
+    }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(PollsContainer);

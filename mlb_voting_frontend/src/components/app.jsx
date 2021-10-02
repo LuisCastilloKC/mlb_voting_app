@@ -11,6 +11,7 @@ const App = () => {
                 <Navbar />
                 <Switch>
                 <Route path="/about" exact component={About} />
+                <Route path="/polls" exact component={PollsContainer} />
                 </Switch>
             </Router>
         </div>
