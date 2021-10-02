@@ -1,11 +1,17 @@
 import React from 'react';
-
+import { updatePlayerName } from '../actions/playerNamesActions'
+import { connect } from 'react-redux'
 
 
 const PlayerName = (props) => {
 
     const handleVote = () => {
-        
+        props.updatePlayerName({
+            id: props.playerNameKey.id,
+            player_name: { 
+                votes: props.playerNameKey.votes + 1
+            }
+        })
     }
 
     return(
@@ -17,4 +23,10 @@ const PlayerName = (props) => {
     )
 }
 
-export default PlayerName;
+const mapDispatchToProps = dispatch => {
+    return {
+        updatePlayerName: (playerName) => dispatch(updatePlayerName(playerName))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(PlayerName);
