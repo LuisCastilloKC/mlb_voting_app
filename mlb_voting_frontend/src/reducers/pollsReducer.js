@@ -5,6 +5,11 @@ export const pollsReducer = (state = {polls: []}, action) => {
             return {
                 polls: action.payload
             }
+        case 'UPDATE_PLAYER_NAME':
+            const poll = state.poll.find(poll => poll.id === action.payload.poll.id)
+            return {
+
+            }
             default:
                 return state
     }
