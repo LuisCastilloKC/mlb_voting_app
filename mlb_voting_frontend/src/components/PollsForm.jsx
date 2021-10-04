@@ -10,7 +10,7 @@ class PollsForm extends Component {
     render(){
         return (
             <form>
-                <label>Create a Poll</label>
+                <label>Create a Poll:</label>
                 <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
                 <br />
                 <input type="submit" value="Create Poll" />

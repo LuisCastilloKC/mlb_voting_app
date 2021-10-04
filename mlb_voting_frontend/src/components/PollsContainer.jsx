@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPolls } from '../actions/pollsActions'
 import Poll from './Poll'
+import PollsForm from './PollsForm'
 
 class PollsContainer extends Component {
     componentDidMount(){
@@ -12,6 +13,7 @@ class PollsContainer extends Component {
         return (
             <div>
                 Polls Container
+                <PollsForm />
                 {this.props.polls.map(poll => <Poll pollKey={poll} />)}
             </div>
         );
