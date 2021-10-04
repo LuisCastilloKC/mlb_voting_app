@@ -6,12 +6,19 @@ class PollsForm extends Component {
         question: ""
     }
 
+    handleChange = (e) => {
+        const { question, value } = e.target
+
+        this.setState({ 
+            [question]: value
+        })
+    }
 
     render(){
         return (
-            <form>
-                <label>Create a Poll:</label>
-                <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
+            <form onSubmit={this.handleSubmit}>
+                <label>question:</label>
+                <input type='text' value={this.state.question} onChange={this.handleChange} name="question" />
                 <br />
                 <input type="submit" value="Create Poll" />
             </form>
