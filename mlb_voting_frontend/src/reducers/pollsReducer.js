@@ -5,6 +5,8 @@ export const pollsReducer = (state = {polls: []}, action) => {
             return {
                 polls: action.payload
             }
+            case 'ADD_POLL':
+                return [...state, action.payload]
         case 'UPDATE_PLAYER_NAME':
             const poll = state.polls.find(poll => poll.id === action.payload.poll_id)
     
