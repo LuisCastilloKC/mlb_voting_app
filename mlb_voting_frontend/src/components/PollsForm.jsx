@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addForm } from '../actions/pollsForm'
+import { connect } from 'react-redux'
 
 class PollsForm extends Component {
 
@@ -14,6 +16,11 @@ class PollsForm extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addToll(state)
+    }
+
     render(){
         return (
             <form onSubmit={this.handleSubmit}>
@@ -26,4 +33,4 @@ class PollsForm extends Component {
     }
 }
 
-export default PollsForm;
+export default connect(null, { addPoll })(PollsForm);
