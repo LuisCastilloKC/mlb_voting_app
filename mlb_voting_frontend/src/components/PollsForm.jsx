@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addForm } from '../actions/pollsForm'
+import { addPoll } from '../actions/pollsActions'
 import { connect } from 'react-redux'
 
 class PollsForm extends Component {
@@ -18,7 +18,7 @@ class PollsForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addToll(state)
+        this.props.addPoll(this.state)
     }
 
     render(){

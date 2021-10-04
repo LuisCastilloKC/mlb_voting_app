@@ -8,13 +8,13 @@ export const fetchPolls = () => {
 }
 
 export const addPoll = poll => {
-    return dispatch => { 
+    return dispatch =>{ 
     fetch('http://localhost:3000/polls', {
         method: 'POST', 
         body: JSON.stringify(poll),
         headers: { 'content-Type': 'application/json' }
     })
     .then(resp => resp.json())
-    .then(poll => dispatch({ type: 'ADD_POLL',payload: polls }))
+    .then(poll => dispatch({ type: 'ADD_POLL',payload: poll }))
     }
 }
