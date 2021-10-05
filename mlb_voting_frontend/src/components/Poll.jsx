@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PlayerName from './PlayerName'
 import PlayerForm from './PlayerForm'
+import { deletePoll } from '..actions/pollsActions'
 
 const Poll = (props) => {
 

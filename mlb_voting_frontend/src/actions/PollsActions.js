@@ -18,3 +18,12 @@ export const addPoll = poll => {
     .then(poll => dispatch({ type: 'ADD_POLL',payload: poll }))
     }
 }
+
+export const deletePoll = pollId => {
+    return dispatch =>{ 
+    fetch(`http://localhost:3000/polls/${pollId}`, {
+        method: 'DELETE', 
+    })
+    dispatch({ type: 'DELETE_POLL',payload: pollId })
+    }
+}
