@@ -19,6 +19,10 @@ export const pollsReducer = (state = {polls: []}, action) => {
                 return {
                     polls: state.polls.filter(poll => poll.id !== action.payload)
                 }
+            case 'EDIT_POLL':
+                return {
+                    polls: state.polls.map(poll => poll.id === action.payload.id ? action.payload : poll)
+                }
         case 'UPDATE_PLAYER_NAME':
             let poll = state.polls.find(poll => poll.id === action.payload.poll_id)
     
