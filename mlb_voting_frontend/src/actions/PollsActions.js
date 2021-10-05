@@ -31,7 +31,7 @@ export const deletePoll = pollId => {
 export const editPoll = poll => {
     return dispatch =>{ 
     fetch(`http://localhost:3000/polls/${poll.id}`, {
-        method: 'POST', 
+        method: 'PATCH', 
         body: JSON.stringify(poll),
         headers: { 'content-Type': 'application/json' }
     })

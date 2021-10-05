@@ -20,6 +20,7 @@ class EditPollForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.editPoll(this.state)
+        this.props.setShowEditForm(false)
     }
 
     render(){

@@ -4,6 +4,7 @@ import PlayerName from './PlayerName'
 import PlayerForm from './PlayerForm'
 import { deletePoll } from '../actions/pollsActions'
 import { connect } from 'react-redux'
+import  EditPollForm from './EditPollForm'
 
 const Poll = (props) => {
 
@@ -16,6 +17,7 @@ const Poll = (props) => {
             <button onClick={()=> setShowForm(!showForm)}>Add a Player</button>
             <button onClick={()=> props.deletePoll(props.pollKey.id)}>Delete Poll</button>
             <button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</button>
+            {showEditForm && <EditPollForm setShowEditForm={setShowEditForm} poll={props.pollKey}/>}
             {showForm && <PlayerForm poll_id={props.pollKey.id}/>}
             {props.pollKey.player_names.map(playerName => <PlayerName playerNameKey={playerName} />)}
         </>
