@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { updatePlayerName } from '../actions/playerNamesActions'
 import { connect } from 'react-redux'
+
 
 
 const PlayerName = (props) => {
@@ -14,11 +15,14 @@ const PlayerName = (props) => {
         })
     }
 
+    const [showForm, setShowForm] = useState(false)
+
     return(
         <>
             <h3>{props.playerNameKey.name}</h3>
             <h3>{props.playerNameKey.votes}</h3>
             <button onClick={handleVote}>Vote</button>
+            <button onClick={()=> setShowForm(!showForm)}>Edit Player</button>
         </>
     )
 }
