@@ -11,6 +11,7 @@ const Poll = (props) => {
         <>
             <h1>{props.pollKey.question}</h1>
             <button onClick={()=> setShowForm(!showForm)}>Add a Player</button>
+            <button onClick={()=> props.deletePoll(props.pollKey.id)}>Delete Poll</button>
             {showForm && <PlayerForm poll_id={props.pollKey.id}/>}
             {props.pollKey.player_names.map(playerName => <PlayerName playerNameKey={playerName} />)}
         </>
