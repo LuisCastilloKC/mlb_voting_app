@@ -12,3 +12,15 @@ export const updatePlayerName = (playerName) => {
         .then(playerName => dispatch({ type: 'UPDATE_PLAYER_NAME', payload: playerName}))
     }
 }
+
+export const addPlayer = playerName => {
+    return dispatch =>{ 
+    fetch('http://localhost:3000/playerName', {
+        method: 'POST', 
+        body: JSON.stringify(playerName),
+        headers: { 'content-Type': 'application/json' }
+    })
+    .then(resp => resp.json())
+    .then(playerData => dispatch({ type: 'ADD_POLL',payload: playerData }))
+    }
+}

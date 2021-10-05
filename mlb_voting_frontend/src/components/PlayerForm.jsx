@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { addPoll } from '../actions/pollsActions'
 import { connect } from 'react-redux'
 
-class PollsForm extends Component {
+class PlayerForm extends Component {
 
     state = {
-        question: ""
+        name: "",
+        poll_id: this.poll_id
     }
 
     handleChange = (e) => {
@@ -27,8 +28,8 @@ class PollsForm extends Component {
     render(){
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>Create a Question:</label>
-                <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
+                <label>Player Name:</label>
+                <input type="text" value={this.state.question} onChange={this.handleChange} name="name" />
                 <br />
                 <input type="submit" value="Create Poll" />
             </form>
@@ -36,4 +37,4 @@ class PollsForm extends Component {
     }
 }
 
-export default connect(null, { addPoll })(PollsForm);
+export default connect(null, { addPoll })(PlayerForm);
