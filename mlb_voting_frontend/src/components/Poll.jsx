@@ -19,7 +19,7 @@ const Poll = (props) => {
             <button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</button>
             {showEditForm && <EditPollForm setShowEditForm={setShowEditForm} poll={props.pollKey}/>}
             {showForm && <PlayerForm poll_id={props.pollKey.id}/>}
-            {props.pollKey.player_names.map(playerName => <PlayerName playerNameKey={playerName} />)}
+            {props.pollKey.player_names.map(playerName => <PlayerName key={playerName.id} playerNameKey={playerName} />)}
         </>
     )
 }

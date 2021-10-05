@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { updatePlayerName } from '../actions/playerNamesActions'
 import { connect } from 'react-redux'
+import EditPlayerNameForm from './EditPlayerNameForm';
 
 
 
@@ -23,6 +24,7 @@ const PlayerName = (props) => {
             <h3>{props.playerNameKey.votes}</h3>
             <button onClick={handleVote}>Vote</button>
             <button onClick={()=> setShowForm(!showForm)}>Edit Player</button>
+            {showForm && <EditPlayerNameForm playerName={props.playerNameKey} setShowForm={setShowForm}/>}
         </>
     )
 }

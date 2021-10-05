@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { editPlayer } from '../actions/playerNamesActions'
+import { updatePlayerName } from '../actions/playerNamesActions'
 import { connect } from 'react-redux'
 
 class EditPlayerNameForm extends Component {
@@ -20,8 +20,8 @@ class EditPlayerNameForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addPlayer(this.state)
-        this.props.setForm(false)
+        this.props.updatePlayerName(this.state)
+        this.props.setShowForm(false)
     }
 
     render(){
@@ -36,4 +36,4 @@ class EditPlayerNameForm extends Component {
     }
 }
 
-export default connect(null, { editPlayer })(EditPlayerNameForm);
+export default connect(null, { updatePlayerName })(EditPlayerNameForm);

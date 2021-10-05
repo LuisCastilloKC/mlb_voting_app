@@ -14,7 +14,7 @@ class PollsContainer extends Component {
             <div>
                 Polls Container
                 <PollsForm />
-                {this.props.polls.map(poll => <Poll pollKey={poll} />)}
+                {this.props.polls.map(poll => <Poll key={poll.id} pollKey={poll} />)}
             </div>
         );
     }
