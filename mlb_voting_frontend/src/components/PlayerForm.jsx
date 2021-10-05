@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { addPoll } from '../actions/pollsActions'
+import { addPlayer } from '../actions/playerNamesActions'
 import { connect } from 'react-redux'
 
 class PlayerForm extends Component {
 
     state = {
         name: "",
-        poll_id: this.poll_id
+        poll_id: this.props.poll_id
     }
 
     handleChange = (e) => {
@@ -19,9 +19,9 @@ class PlayerForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addPoll(this.state)
+        this.props.addPlayer(this.state)
         this.setState({
-            question: ""
+            name: ""
         })
     }
 
@@ -29,12 +29,12 @@ class PlayerForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>Player Name:</label>
-                <input type="text" value={this.state.question} onChange={this.handleChange} name="name" />
+                <input type="text" value={this.state.name} onChange={this.handleChange} name="name" />
                 <br />
-                <input type="submit" value="Create Poll" />
+                <input type="submit" value="Create Player" />
             </form>
         )
     }
 }
 
-export default connect(null, { addPoll })(PlayerForm);
+export default connect(null, { addPlayer })(PlayerForm);

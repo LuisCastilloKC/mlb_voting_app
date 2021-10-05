@@ -9,8 +9,14 @@ export const pollsReducer = (state = {polls: []}, action) => {
             return {
                 polls: [...state.polls, action.payload]
                 }
+        case 'ADD_PLAYER':
+            let pollWithNewPlayer = state.polls.find(poll => poll.id === action.payload.poll_id)
+            pollWithNewPlayer.player_names = [...pollWithNewPlayer.player_names, action.payload]
+            return {
+                polls: state.polls.map(pollObj => pollObj.id === pollWithNewPlayer.id ? pollWithNewPlayer : pollObj)
+            }
         case 'UPDATE_PLAYER_NAME':
-            const poll = state.polls.find(poll => poll.id === action.payload.poll_id)
+            let poll = state.polls.find(poll => poll.id === action.payload.poll_id)
     
             poll.player_names = poll.player_names.map(playerName => playerName.id === action.payload.id ? action.payload : playerName)
             return {
