@@ -27,3 +27,15 @@ export const deletePoll = pollId => {
     dispatch({ type: 'DELETE_POLL',payload: pollId })
     }
 }
+
+export const editPoll = poll => {
+    return dispatch =>{ 
+    fetch(`http://localhost:3000/polls/${poll.id}`, {
+        method: 'POST', 
+        body: JSON.stringify(poll),
+        headers: { 'content-Type': 'application/json' }
+    })
+    .then(resp => resp.json())
+    .then(poll => dispatch({ type: 'EDIT_POLL',payload: poll }))
+    }
+}
