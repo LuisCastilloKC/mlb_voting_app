@@ -2,7 +2,7 @@ import React from 'react';
 import PollsContainer from './PollsContainer'
 import { Navbar } from './Navbar';
 import { About } from './About';
-import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
     return (
