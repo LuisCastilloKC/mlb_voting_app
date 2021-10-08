@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Nav, NavLink, NavMenu} from './styled-component/Navbar.style'
 
 
 export const Navbar = () => {
@@ -9,7 +10,6 @@ export const Navbar = () => {
                 <NavLink to="/">
                     <h1>Poll App</h1>
                 </NavLink>
-                <Bars />
                 <NavMenu>
                     <NavLink to="/poll" activeStyle>
                         Poll
@@ -22,6 +22,8 @@ export const Navbar = () => {
         </>
     )
 }
+
+
 
 // export const Navbar = () => {
    
