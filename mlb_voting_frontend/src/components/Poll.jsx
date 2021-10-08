@@ -6,6 +6,7 @@ import { deletePoll } from '../actions/pollsActions'
 import { connect } from 'react-redux'
 import  EditPollForm from './EditPollForm'
 import {PollQuestion, QuestionDiv } from './styled-component/PollQuestion.style'
+import { Button } from './styled-component/Button.style'
 
 
 const Poll = (props) => {
@@ -18,9 +19,9 @@ const Poll = (props) => {
         <QuestionDiv> 
             <PollQuestion main>{props.pollKey.question}</PollQuestion>
                 <div>
-                    <button onClick={()=> setShowForm(!showForm)}>Add a Player</button>
-                    <button onClick={()=> props.deletePoll(props.pollKey.id)}>Delete Poll</button>
-                    <button button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</button>
+                    <Button onClick={()=> setShowForm(!showForm)}>Add a Player</Button>
+                    <Button onClick={()=> props.deletePoll(props.pollKey.id)}>Delete Poll</Button>
+                    <Button button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</Button>
                 </div>
             {showEditForm && <EditPollForm setShowEditForm={setShowEditForm} poll={props.pollKey}/>}
             {showForm && <PlayerForm poll_id={props.pollKey.id}/>}
