@@ -21,7 +21,7 @@ const PlayerName = (props) => {
     return(
         <>
             <h3>{props.playerNameKey.name}</h3>
-            <h3>{props.playerNameKey.votes}</h3>
+            <div>Vote count: {props.playerNameKey.votes}</div>
             <button onClick={handleVote}>Vote</button>
             <button onClick={()=> setShowForm(!showForm)}>Edit Player</button>
             {showForm && <EditPlayerNameForm playerName={props.playerNameKey} setShowForm={setShowForm}/>}
