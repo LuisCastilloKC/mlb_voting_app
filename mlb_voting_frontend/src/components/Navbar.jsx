@@ -8,11 +8,14 @@ export const Navbar = () => {
         <>
             <Nav>
                 <NavLink to="/">
-                    <h1>Poll App</h1>
+                    <h1>MLB Poll App</h1>
                 </NavLink>
                 <NavMenu>
-                    <NavLink to="/poll" activeStyle>
-                        Poll
+                    <NavLink to="/" activeStyle>
+                        Home
+                    </NavLink>
+                    <NavLink to="/polls" activeStyle>
+                        Polls
                     </NavLink>
                     <NavLink to="/about" activeStyle>
                         About
