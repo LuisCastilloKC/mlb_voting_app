@@ -11,15 +11,9 @@ export const Navbar = () => {
                     <h1>MLB Poll App</h1>
                 </NavLink>
                 <NavMenu>
-                    <NavLink exact to="/" activeStyle>
-                        Home
-                    </NavLink>
-                    <NavLink to="/polls" activeStyle>
-                        Polls
-                    </NavLink>
-                    <NavLink to="/about" activeStyle>
-                        About
-                    </NavLink>
+                    <NavLink exact to="/" activeStyle>Home</NavLink>
+                    <NavLink to="/polls" activeStyle>Polls</NavLink>
+                    <NavLink to="/about" activeStyle>About</NavLink>
                 </NavMenu>
             </Nav>
         </>
