@@ -34,6 +34,18 @@ export const NavMenu = styled.div`
     }
 `
 
+export const NavBtn = styled.nav`
+    display: none;
+    align-items: center;
+    margin-right: 24px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`
+
+
+
 // const Navbar = styled.nav`
 //     *{
 //         padding: 0;
