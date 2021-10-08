@@ -21,6 +21,7 @@ const PlayerName = (props) => {
 
     return(
         <>
+        
         <Wrapper>
             <h3>{props.playerNameKey.name}</h3>
             <div>Vote count: {props.playerNameKey.votes}</div>
@@ -28,6 +29,7 @@ const PlayerName = (props) => {
             <button onClick={()=> setShowForm(!showForm)}>Edit Player</button>
             {showForm && <EditPlayerNameForm playerName={props.playerNameKey} setShowForm={setShowForm}/>}
         </Wrapper>
+        
         </>
     )
 }
