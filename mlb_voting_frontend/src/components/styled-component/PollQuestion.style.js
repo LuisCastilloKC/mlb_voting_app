@@ -8,8 +8,7 @@ export const QuestionDiv = styled.div`
 
   export const PollQuestion = styled.h1`
     font-size: 2rem;
-    font-weight: 300;
     margin: 1rem;
-    color: ${props => (props.main ? "black" : "white")};
+    color:  #15cdfc;
     text-align: center;
   `;

@@ -2,8 +2,19 @@ import styled from "styled-components";
 
 
 export const FormWrapper = styled.div`
-    position:relative;
+    position: relative;
     margin: 100px;
+`
+
+export const H2Form = styled.h1`
+    text-align: center;
+    color: #15cdfc;
+ 
+`
+export const ButtonDiv = styled.div`
+    text-align: center;
+    margin-top: 30px;
+  
 `
 
 export const StyledForm = styled.form`
@@ -20,17 +31,17 @@ export const InputQuestion = styled.input`
     transition: all 0.5s ease;
   
 
-  outline: none;
-  border: 0;
-  border-bottom: 1px solid #cecece;
-  height: 40px;
-  width: 50%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #cecece;
+    height: 40px;
+    width: 50%;
 `
 export const StyledTextArea = styled.textarea`
     display:block;
-  color: black;
-  top: -20px;
-  font-size: 14px;
+    color: black;
+    top: -20px;
+    font-size: 14px;
 `
 export const StyledButton = styled.button`
     background-color: #4CAF50; 
@@ -48,14 +59,3 @@ export const StyledButton = styled.button`
     &:hover {
         background-color: #449d48;
 `
-export const H2Form = styled.h1`
-    text-align: center;
-    color: #15cdfc;
-    
-`
-export const ButtonDiv = styled.div`
-   text-align: center;
-   margin-top: 30px;
-  
-`
-
