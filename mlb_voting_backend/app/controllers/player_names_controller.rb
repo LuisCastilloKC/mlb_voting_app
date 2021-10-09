@@ -11,12 +11,6 @@ class PlayerNamesController < ApplicationController
         render json: player_name
     end
 
-    def destroy
-        player_name = PlayerName.find(params[:id])
-        player_name.destroy
-        render json: {}
-    end
-
     private
 
     def player_name_params
