@@ -21,7 +21,7 @@ const Poll = (props) => {
                 <div>
                     <Button onClick={()=> setShowForm(!showForm)}>Add a Player</Button>
                     <Button onClick={()=> props.deletePoll(props.pollKey.id)}>Delete Poll</Button>
-                    <Button button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</Button>
+                    <Button onClick={()=> setShowEditForm(!showEditForm)}>Edit Poll</Button>
                 </div>
             {showEditForm && <EditPollForm setShowEditForm={setShowEditForm} poll={props.pollKey}/>}
             {showForm && <PlayerForm poll_id={props.pollKey.id}/>}

@@ -15,4 +15,4 @@ export const Wrapper = styled.div`
   padding: 1rem;
   margin: 1rem;  
   }
-`;
+`

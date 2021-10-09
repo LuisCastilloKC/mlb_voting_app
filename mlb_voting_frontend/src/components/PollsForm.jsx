@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { addPoll } from '../actions/pollsActions'
 import { connect } from 'react-redux'
+import {H2Form, FormWrapper, InputQuestion, StyledForm, StyledButton, ButtonDiv } from './styled-component/PollQuestionForm.style'
 
 class PollsForm extends Component {
 
@@ -24,14 +25,31 @@ class PollsForm extends Component {
         })
     }
 
+
+
     render(){
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>Create a Question:</label>
-                <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
-                <br />
-                <input type="submit" value="Create Poll" />
-            </form>
+
+<FormWrapper>
+    <StyledForm onSubmit={this.handleSubmit} >
+        <H2Form>Create Poll</H2Form>
+        <InputQuestion type="text" value={this.state.question} onChange={this.handleChange} name="question" />
+        <ButtonDiv>
+            <StyledButton type="submit">CREATE</StyledButton> 
+        </ButtonDiv>
+       
+    </StyledForm>
+</FormWrapper>
+
+
+            // <div>
+            // <form onSubmit={this.handleSubmit}>
+            //     <label>Create a Question:</label>
+            //     <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
+                
+            //     <input type="submit" value="Create Poll" />
+            // </form>
+            // </div>
         )
     }
 }

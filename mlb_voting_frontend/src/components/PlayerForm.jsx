@@ -16,7 +16,7 @@ class PlayerForm extends Component {
             [name]: value
         })
     }
-
+    
     handleSubmit = e => {
         e.preventDefault()
         this.props.addPlayer(this.state)
@@ -24,6 +24,8 @@ class PlayerForm extends Component {
             name: ""
         })
     }
+
+    
 
     render(){
         return (
