@@ -13,6 +13,7 @@ export const Navbar = () => {
                 <NavMenu>
                     <NavLink exact to="/" activeStyle>Home</NavLink>
                     <NavLink to="/polls" activeStyle>Polls</NavLink>
+                    <NavLink to="/topplayers" activeStyle>Top Players</NavLink>
                     <NavLink to="/about" activeStyle>About</NavLink>
                 </NavMenu>
             </Nav>

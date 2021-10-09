@@ -3,6 +3,7 @@ import PollsContainer from './PollsContainer'
 import  { Navbar }  from './Navbar';
 import { Home } from './Home';
 import { About } from './About';
+import { TopPlayers } from './TopPlayers'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
@@ -12,8 +13,9 @@ const App = () => {
                 <Navbar />
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/about" exact component={About} />
                     <Route path="/polls" exact component={PollsContainer} />
+                    <Route path="/topplayers" exact component={TopPlayers} />
+                    <Route path="/about" exact component={About} />
                 </Switch>
             </Router>
         </div>
