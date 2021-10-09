@@ -12,7 +12,6 @@ class PollsContainer extends Component {
     render(){
         return (
             <div>
-                Polls Container
                 <PollsForm />
                 {this.props.polls.map(poll => <Poll key={poll.id} pollKey={poll} />)}
             </div>

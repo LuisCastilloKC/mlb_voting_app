@@ -41,15 +41,6 @@ class PollsForm extends Component {
     </StyledForm>
 </FormWrapper>
 
-
-            // <div>
-            // <form onSubmit={this.handleSubmit}>
-            //     <label>Create a Question:</label>
-            //     <input type="text" value={this.state.question} onChange={this.handleChange} name="question" />
-                
-            //     <input type="submit" value="Create Poll" />
-            // </form>
-            // </div>
         )
     }
 }
