@@ -3,7 +3,7 @@ import PollsContainer from './PollsContainer'
 import  { Navbar }  from './Navbar';
 import { Home } from './Home';
 import { About } from './About';
-import { TopPlayers } from './TopPlayers'
+import  TopPlayers  from './TopPlayers'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {

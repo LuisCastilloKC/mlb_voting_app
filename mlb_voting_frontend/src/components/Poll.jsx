@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import PlayerName from './PlayerName'
 import PlayerForm from './PlayerForm'
@@ -9,10 +8,12 @@ import {PollQuestion, QuestionDiv } from './styled-component/PollQuestion.style'
 import { Button } from './styled-component/Button.style'
 
 
+
 const Poll = (props) => {
 
     const [showForm, setShowForm] = useState(false)
     const [showEditForm, setShowEditForm] = useState(false)
+
 
     return(
         <>

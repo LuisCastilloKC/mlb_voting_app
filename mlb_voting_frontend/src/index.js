@@ -5,10 +5,10 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { BrowserRouter as Router } from 'react-router-dom'
-
 import App from './components/App'
 import './index.css'
 import { rootReducer } from './reducers/rootReducer'
+
 
 const store = createStore(
     rootReducer,

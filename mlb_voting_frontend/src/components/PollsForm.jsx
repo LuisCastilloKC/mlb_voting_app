@@ -25,21 +25,22 @@ class PollsForm extends Component {
         })
     }
 
-
-
+    
+    
     render(){
         return (
 
-<FormWrapper>
-    <StyledForm onSubmit={this.handleSubmit} >
-        <H2Form>Create Poll</H2Form>
-        <InputQuestion type="text" value={this.state.question} onChange={this.handleChange} name="question" />
-        <ButtonDiv>
-            <StyledButton type="submit">CREATE</StyledButton> 
-        </ButtonDiv>
-       
-    </StyledForm>
-</FormWrapper>
+    <FormWrapper>
+        <StyledForm onSubmit={this.handleSubmit} >
+            <H2Form>Create Poll</H2Form>
+            <InputQuestion type="text" value={this.state.question} onChange={this.handleChange} name="question" />
+            <ButtonDiv>
+                <StyledButton type="submit">CREATE</StyledButton> 
+            </ButtonDiv>
+            
+        </StyledForm>
+
+    </FormWrapper>
 
         )
     }

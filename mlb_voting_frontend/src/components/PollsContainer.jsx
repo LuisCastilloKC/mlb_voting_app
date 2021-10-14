@@ -4,17 +4,26 @@ import { fetchPolls } from '../actions/pollsActions'
 import Poll from './Poll'
 import PollsForm from './PollsForm'
 
+
 class PollsContainer extends Component {
+
+
     componentDidMount(){
         this.props.fetchPolls()
     }
 
     render(){
+
+
         return (
             <div>
                 <PollsForm />
                 {this.props.polls.map(poll => <Poll key={poll.id} pollKey={poll} />)}
+               
+
+
             </div>
+            
         );
     }
 }
@@ -28,6 +37,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchPolls: () => dispatch(fetchPolls())
+        
     }
 }
 
