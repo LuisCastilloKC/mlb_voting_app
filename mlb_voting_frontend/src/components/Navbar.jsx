@@ -8,7 +8,7 @@ export const Navbar = () => {
         <>
             <Nav>
                 <NavLink to="/">
-                    <h1>MLB Poll App</h1>
+                    <h1>MLB Voting App</h1>
                 </NavLink>
                 <NavMenu>
                     <NavLink exact to="/" activeStyle>Home</NavLink>
