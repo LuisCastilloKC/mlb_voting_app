@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addPoll } from '../actions/pollsActions'
+import { addPoll } from '../actions/PollsActions'
 import { connect } from 'react-redux'
 import {H2Form, FormWrapper, InputQuestion, StyledForm, StyledButton, ButtonDiv } from './styled-component/PollQuestionForm.style'
 
