@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PlayerName from './PlayerName'
 import PlayerForm from './PlayerForm'
-import { deletePoll } from '../actions/pollsActions'
+import { deletePoll } from '../actions/PollsActions'
 import { connect } from 'react-redux'
 import  EditPollForm from './EditPollForm'
 import {PollQuestion, QuestionDiv } from './styled-component/PollQuestion.style'

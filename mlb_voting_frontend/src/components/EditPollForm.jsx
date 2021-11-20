@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { editPoll } from '../actions/pollsActions'
+import { editPoll } from '../actions/PollsActions'
 import { connect } from 'react-redux'
 
 class EditPollForm extends Component {
