@@ -2,6 +2,19 @@ import React { Component } from 'react'
 
 class SignUp extends Component{
 
+    state = {
+        username: '',
+        password: '',
+        firstName: '',
+        lastName: ''
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     render(){
         return(
             <form>
