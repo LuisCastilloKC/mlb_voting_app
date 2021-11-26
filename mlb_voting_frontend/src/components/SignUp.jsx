@@ -18,7 +18,8 @@ class SignUp extends Component{
 
     render(){
         return(
-            <SignUpFormStyle> 
+           /*form element */
+            <SignUpFormStyle onSubmit={this.handleSubmit}> 
                 <h1>Sign Up Form</h1>
                 <label>Username:</label>
                 <SignUpFormInputStyle name='username' value={this.state.username} onChange={this.handleChange} />  
@@ -29,7 +30,8 @@ class SignUp extends Component{
                 <label>Last Name:</label>
                 <SignUpFormInputStyle name='lastName' />
                 <SignUpFormInputStyle type='submit' value='Register' />
-            </SignUpFormStyle>
+            </SignUpFormStyle>  
+            /*form element */
         );
     }
 
