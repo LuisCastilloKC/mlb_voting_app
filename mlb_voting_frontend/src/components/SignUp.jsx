@@ -1,4 +1,5 @@
-import React { Component } from 'react'
+import React, { Component } from 'react'
+import { SignUpFormStyle, SignUpFormInputStyle } from '../components/styled-component/SignUpForm.style'
 
 class SignUp extends Component{
 
@@ -17,18 +18,18 @@ class SignUp extends Component{
 
     render(){
         return(
-            <form>
+            <SignUpFormStyle> 
                 <h1>Sign Up Form</h1>
                 <label>Username:</label>
-                <input name='username' />
+                <SignUpFormInputStyle name='username' value={this.state.username} onChange={this.handleChange} />  
                 <label>Password:</label>
-                <input name='password' type='password'/>
+                <SignUpFormInputStyle name='password' type='password'/>
                 <label>First Name:</label>
-                <input name='firstName' />
+                <SignUpFormInputStyle name='firstName' />
                 <label>Last Name:</label>
-                <input name='lastName' />
-                <input type='submit' value='Register' />
-            </form>
+                <SignUpFormInputStyle name='lastName' />
+                <SignUpFormInputStyle type='submit' value='Register' />
+            </SignUpFormStyle>
         );
     }
 
