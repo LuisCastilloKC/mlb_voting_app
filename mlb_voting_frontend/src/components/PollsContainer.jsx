@@ -14,7 +14,6 @@ class PollsContainer extends Component {
 
     render(){
 
-
         return (
             <div>
                 <PollsForm />
