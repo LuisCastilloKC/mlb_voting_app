@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TopPlayerWrapper } from './styled-component/Card.style'
+import { TopPlayerWrapper } from './styled-component/Card.style.js'
 
 class TopPlayers  extends Component{ 
 

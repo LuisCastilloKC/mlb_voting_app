@@ -1,9 +1,9 @@
 import React from 'react';
-import PollsContainer from './PollsContainer'
-import  { Navbar }  from './Navbar';
-import { Home } from './Home';
-import { About } from './About';
-import  TopPlayers  from './TopPlayers'
+import PollsContainer from './components/PollsContainer'
+import  { Navbar }  from './components/Navbar';
+import { Home } from './components/Home';
+import { About } from './components/About';
+import  TopPlayers  from './components/TopPlayers'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
