@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { addPoll } from '../actions/PollsActions'
-import { connect } from 'react-redux'
 import {H2Form, FormWrapper, InputQuestion, StyledForm, StyledButton, ButtonDiv } from './styled-component/PollQuestionForm.style'
 
 
 const PollsForm = () => {
+    const dispatch = useDispatch()
     const [question, setQuestion] = useState({
         question: ""
     })
@@ -13,6 +14,14 @@ const PollsForm = () => {
         const { name, value } = e.target
         setQuestion({
             [name]: value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatch(addPoll(question))
+        setQuestion({
+            question: ""
         })
     }
 
