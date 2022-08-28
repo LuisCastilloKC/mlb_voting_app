@@ -9,8 +9,26 @@ const PollsForm = () => {
         question: ""
     })
 
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setQuestion({
+            [name]: value
+        })
+    }
+
     return(
-       <div></div>
+        <FormWrapper>
+        <StyledForm onSubmit={handleSubmit} >
+           <H2Form>Create Poll</H2Form>
+           <InputQuestion type="text" value={question.question} onChange={handleChange} name="question" />
+            <ButtonDiv>
+                <StyledButton type="submit">CREATE</StyledButton> 
+            </ButtonDiv>
+           
+        </StyledForm>
+
+    </FormWrapper>
+
     )
 }
 
