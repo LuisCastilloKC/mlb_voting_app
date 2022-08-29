@@ -1,30 +1,38 @@
-import React, { useState } from 'react'
-import { addPlayer } from '../actions/playerNamesActions'
-import { connect } from 'react-redux'
+import React, { useState } from "react";
+import { addPlayer } from "../actions/playerNamesActions";
+import { connect } from "react-redux";
 
+const PlayerForm = ({ poll_id }) => {
+  const [playerName, setPlayerName] = useState({
+    name: "",
+    poll_id: poll_id,
+  });
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-const PlayerForm = ({poll_id}) => {
-    const [playerName, setPlayerName] = useState({
-        name: "",
-        poll_id: poll_id
-    })
-    const handleChange = (e) => {
-        const { name, value } = e.target
+    setPlayerName({
+      ...playerName,
+      [name]: value,
+    });
+  };
 
-        setPlayerName({
-            ...playerName,
-            [name]: value
-        })
-    }
-    
-    return(
-        <div>
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Player Name:</label>
+      <input
+        type="text"
+        value={playerName.name}
+        onChange={handleChange}
+        name="name"
+      />
+      <br />
+      <input type="submit" value="Create Player" />
+    </form>
+  );
+};
 
-        </div>
-    )
-}
-
-export default PlayerForm
+export default PlayerForm;
 
 // class PlayerForm extends Component {
 
@@ -36,11 +44,11 @@ export default PlayerForm
 //     handleChange = (e) => {
 //         const { name, value } = e.target
 
-//         this.setState({ 
+//         this.setState({
 //             [name]: value
 //         })
 //     }
-    
+
 //     handleSubmit = e => {
 //         e.preventDefault()
 //         this.props.addPlayer(this.state)
@@ -48,8 +56,6 @@ export default PlayerForm
 //             name: ""
 //         })
 //     }
-
-    
 
 //     render(){
 //         return (
