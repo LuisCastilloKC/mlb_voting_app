@@ -8,10 +8,20 @@ const PlayerForm = ({poll_id}) => {
         name: "",
         poll_id: poll_id
     })
+    const handleChange = (e) => {
+        const { name, value } = e.target
 
-    return(<div>
+        setPlayerName({
+            ...playerName,
+            [name]: value
+        })
+    }
+    
+    return(
+        <div>
 
-    </div>)
+        </div>
+    )
 }
 
 export default PlayerForm
