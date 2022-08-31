@@ -1,70 +1,42 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { updatePlayerName } from '../actions/playerNamesActions'
-import { connect } from 'react-redux'
-
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { updatePlayerName } from "../actions/playerNamesActions";
 
 const EditPlayerNameForm = (props) => {
-    const dispatch = useDispatch()
-    const [playerNameObj, setPlayerNameObj] = useState({
-        name: props.playerName.name,
-        poll_id: props.playerName.poll_id,
-        id: props.playerName.id
-    })
+  const dispatch = useDispatch();
+  const [playerNameObj, setPlayerNameObj] = useState({
+    name: props.playerName.name,
+    poll_id: props.playerName.poll_id,
+    id: props.playerName.id,
+  });
 
-     const handleChange = (e) => {
-        const {name, value} = e.target
-        setPlayerNameObj({
-            ...playerNameObj,
-            [name]: value
-        })
-     }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPlayerNameObj({
+      ...playerNameObj,
+      [name]: value,
+    });
+  };
 
-     const handleSubmit = (e) => {
-        e.preventDefault()
-        dispatch(updatePlayerName(playerNameObj))
-        props.setShowForm(false)
-     }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(updatePlayerName(playerNameObj));
+    props.setShowForm(false);
+  };
 
-    return(
-        <div></div>
-    )
-}
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Edit Name:</label>
+      <input
+        type="text"
+        value={playerNameObj.name}
+        onChange={handleChange}
+        name="name"
+      />
+      <br />
+      <input type="submit" value="Update Player" />
+    </form>
+  );
+};
 
-export default EditPlayerNameForm
-
-// class EditPlayerNameForm extends Component {
-
-//     state = {
-//         name: this.props.playerName.name,
-//         poll_id: this.props.playerName.poll_id,
-//         id: this.props.playerName.id
-//     }
-
-//     handleChange = (e) => {
-//         const { name, value } = e.target
-
-//         this.setState({ 
-//             [name]: value
-//         })
-//     }
-
-//     handleSubmit = e => {
-//         e.preventDefault()
-//         this.props.updatePlayerName(this.state)
-//         this.props.setShowForm(false)
-//     }
-
-//     render(){
-//         return (
-//             <form onSubmit={this.handleSubmit}>
-//                 <label>Edit Name:</label>
-//                 <input type="text" value={this.state.name} onChange={this.handleChange} name="name" />
-//                 <br />
-//                 <input type="submit" value="Update Player" />
-//             </form>
-//         )
-//     }
-// }
-
-// export default connect(null, { updatePlayerName })(EditPlayerNameForm);
+export default EditPlayerNameForm;
