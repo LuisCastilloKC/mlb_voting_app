@@ -10,6 +10,14 @@ const EditPlayerNameForm = (props) => {
         id: props.playerName.id
     })
 
+     const handleChange = (e) => {
+        const {name, value} = e.target
+        setPlayerNameObj({
+            ...playerNameObj,
+            [name]: value
+        })
+     }
+
     return(
         <div></div>
     )
