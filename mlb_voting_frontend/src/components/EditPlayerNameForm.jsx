@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updatePlayerName } from "../actions/playerNamesActions";
 
-const EditPlayerNameForm = (props) => {
+const EditPlayerNameForm = ({ playerName, setShowForm }) => {
   const dispatch = useDispatch();
   const [playerNameObj, setPlayerNameObj] = useState({
-    name: props.playerName.name,
-    poll_id: props.playerName.poll_id,
-    id: props.playerName.id,
+    name: playerName.name,
+    poll_id: playerName.poll_id,
+    id: playerName.id,
   });
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ const EditPlayerNameForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updatePlayerName(playerNameObj));
-    props.setShowForm(false);
+    setShowForm(false);
   };
 
   return (
