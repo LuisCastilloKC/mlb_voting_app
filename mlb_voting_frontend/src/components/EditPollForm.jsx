@@ -8,6 +8,15 @@ const EditPollForm = (props) => {
         question: props.poll.question,
         id: props.poll.id
     })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+
+        setPoll({
+            ...poll,
+            [name]: value
+        })
+    }
     return(
     <div></div>
     )
