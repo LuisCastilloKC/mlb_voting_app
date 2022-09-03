@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { editPoll } from '../actions/PollsActions'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 
 const EditPollForm = (props) => {
+    const dispatch = useDispatch()
     const [poll, setPoll] = useState({
         question: props.poll.question,
         id: props.poll.id
@@ -17,6 +18,14 @@ const EditPollForm = (props) => {
             [name]: value
         })
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatch(props.editPoll(poll))
+        props.setShowEditForm(false)
+    }
+
+
     return(
     <div></div>
     )
