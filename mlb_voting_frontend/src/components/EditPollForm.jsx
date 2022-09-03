@@ -1,37 +1,45 @@
-import React, { useState } from 'react'
-import { editPoll } from '../actions/PollsActions'
-import { useDispatch } from 'react-redux'
-
+import React, { useState } from "react";
+import { editPoll } from "../actions/PollsActions";
+import { useDispatch } from "react-redux";
 
 const EditPollForm = (props) => {
-    const dispatch = useDispatch()
-    const [poll, setPoll] = useState({
-        question: props.poll.question,
-        id: props.poll.id
-    })
+  const dispatch = useDispatch();
+  const [poll, setPoll] = useState({
+    question: props.poll.question,
+    id: props.poll.id,
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-        setPoll({
-            ...poll,
-            [name]: value
-        })
-    }
+    setPoll({
+      ...poll,
+      [name]: value,
+    });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        dispatch(props.editPoll(poll))
-        props.setShowEditForm(false)
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(props.editPoll(poll));
+    props.setShowEditForm(false);
+  };
 
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Edit Question:</label>
+      <input
+        type="text"
+        value={poll.question}
+        onChange={handleChange}
+        name="question"
+      />
+      <br />
+      <input type="submit" value="Update Poll" />
+    </form>
+  );
+};
 
-    return(
-    <div></div>
-    )
-}
-
-export default EditPollForm
+export default EditPollForm;
 // class EditPollForm extends Component {
 
 //     state = {
@@ -42,7 +50,7 @@ export default EditPollForm
 //     handleChange = (e) => {
 //         const { name, value } = e.target
 
-//         this.setState({ 
+//         this.setState({
 //             [name]: value
 //         })
 //     }
