@@ -1,6 +1,34 @@
 import React from 'react';
 
 export const Home = () => {
+
+    const image = [
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+        {url: "http://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird-480x480.png",
+        name: "Arizona",
+        width: "100"},
+   
+    ]
+
     return(
         <>
          <center>

@@ -20,7 +20,7 @@ const EditPollForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(props.editPoll(poll));
+    dispatch(editPoll(poll));
     props.setShowEditForm(false);
   };
 
